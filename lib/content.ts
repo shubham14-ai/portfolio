@@ -1,0 +1,225 @@
+// Portfolio content configuration
+export const portfolioConfig = {
+  // Personal Information
+  personal: {
+    name: "Shubham Mojad",
+    role: "AI Systems & Full-Stack Engineer",
+    email: "shu14mojad@gmail.com",
+    phone: "+91 76668 34062",
+    location: "Nashik, India",
+    description: "AI Systems & Full-Stack Engineer with 2.5+ years of experience building multi-tenant SaaS platforms and LLM-powered applications. Strong expertise in FastAPI microservices, React/Next.js UI systems, AI-driven vendor intelligence platforms, and Dockerized production deployments.",
+    summary: "Building multi-tenant SaaS platforms and LLM-powered applications. Specialized in FastAPI microservices, React/Next.js, and AI-driven vendor intelligence systems.",
+    stats: [
+      { value: "2.5+", label: "Years Exp" },
+      { value: "10+", label: "Projects" },
+      { value: "5+", label: "AI Systems" },
+    ]
+  },
+
+  // Social Links
+  social: [
+    { name: "GitHub", url: "https://github.com", icon: "Github" },
+    { name: "LinkedIn", url: "https://linkedin.com", icon: "Linkedin" },
+    { name: "Email", url: "mailto:shu14mojad@gmail.com", icon: "Mail" },
+  ],
+
+  // Tech Stack
+  techStack: [
+    { name: "Python", color: "#00f0ff" },
+    { name: "FastAPI", color: "#00ff9d" },
+    { name: "React", color: "#00f0ff" },
+    { name: "Next.js", color: "#ffffff" },
+    { name: "AI/ML", color: "#ff00a0" },
+    { name: "Docker", color: "#7b2dff" },
+  ],
+
+  // Skills
+  skills: {
+    categories: [
+      {
+        title: "Languages",
+        skills: [
+          { name: "Python", level: 95 },
+          { name: "JavaScript", level: 90 },
+          { name: "TypeScript", level: 85 },
+        ],
+        color: "#00f0ff",
+      },
+      {
+        title: "Frontend",
+        skills: [
+          { name: "React", level: 92 },
+          { name: "Next.js", level: 90 },
+          { name: "HTML5/CSS3", level: 88 },
+          { name: "Tailwind CSS", level: 90 },
+        ],
+        color: "#00ff9d",
+      },
+      {
+        title: "Backend",
+        skills: [
+          { name: "FastAPI", level: 95 },
+          { name: "Node.js", level: 82 },
+          { name: "Express.js", level: 80 },
+        ],
+        color: "#ff00a0",
+      },
+      {
+        title: "Databases",
+        skills: [
+          { name: "PostgreSQL", level: 90 },
+          { name: "MongoDB", level: 88 },
+          { name: "Redis", level: 85 },
+          { name: "Supabase", level: 82 },
+        ],
+        color: "#7b2dff",
+      },
+    ],
+    additional: [
+      { name: "Docker", category: "DevOps" },
+      { name: "Nginx", category: "DevOps" },
+      { name: "Git", category: "Tools" },
+      { name: "Celery", category: "Backend" },
+      { name: "Pandas", category: "Data" },
+      { name: "OpenAI", category: "AI" },
+      { name: "LLM", category: "AI" },
+      { name: "RAG", category: "AI" },
+      { name: "CI/CD", category: "DevOps" },
+      { name: "AWS", category: "Cloud" },
+      { name: "Vercel", category: "Cloud" },
+      { name: "Figma", category: "Design" },
+    ],
+  },
+
+  // Expertise
+  expertise: [
+    "AI Systems Architecture & LLM Workflows",
+    "Prompt Engineering & Structured AI Pipelines",
+    "FastAPI Microservices & RESTful APIs",
+    "React & Next.js UI Architecture",
+    "Multi-Tenant SaaS Development",
+    "Vendor Intelligence & Recommendation Systems",
+    "Docker, Nginx & CI/CD Deployments",
+    "Database & Cache Optimization (Redis)",
+  ],
+
+  // Projects
+  projects: [
+    {
+      id: 1,
+      title: "AI Vendor Recommendation System",
+      description: "LLM-powered vendor intelligence platform for cost optimization and smart supplier ranking. Designed structured prompt pipelines and data ingestion workflows for automated scoring logic.",
+      category: ["ai", "saas"],
+      tech: ["Python", "FastAPI", "OpenAI", "PostgreSQL", "React"],
+      icon: "Bot",
+      color: "#00f0ff",
+      featured: true,
+    },
+    {
+      id: 2,
+      title: "AI Procurement Optimization Platform",
+      description: "Engineered AI-driven recommendation engine for retail supply-chain use cases. Automated vendor comparison workflows with real-time logging and monitoring.",
+      category: ["ai", "saas"],
+      tech: ["FastAPI", "LLM", "MongoDB", "Redis", "Docker"],
+      icon: "Sparkles",
+      color: "#ff00a0",
+      featured: true,
+    },
+    {
+      id: 3,
+      title: "AI-Powered Billing Intelligence",
+      description: "Developed AI pipelines to convert unstructured billing data into structured insights. Built React dashboards for financial reporting and analytics visualization.",
+      category: ["ai", "fullstack"],
+      tech: ["Python", "React", "FastAPI", "PostgreSQL", "Pandas"],
+      icon: "Layers",
+      color: "#7b2dff",
+      featured: true,
+    },
+    {
+      id: 4,
+      title: "Event Management Platform",
+      description: "Full-stack system with role-based access, booking workflows, and analytics dashboards. Designed scalable APIs optimized for high-concurrency registrations.",
+      category: ["fullstack", "saas"],
+      tech: ["Next.js", "Node.js", "MongoDB", "Redis", "AWS"],
+      icon: "Code2",
+      color: "#00ff9d",
+      featured: false,
+    },
+    {
+      id: 5,
+      title: "Doctor Appointment System",
+      description: "Appointment scheduling platform with patient, doctor, and admin modules. Implemented secure authentication, reminders, and structured medical data handling.",
+      category: ["fullstack", "saas"],
+      tech: ["React", "FastAPI", "PostgreSQL", "JWT", "Docker"],
+      icon: "Code2",
+      color: "#00f0ff",
+      featured: false,
+    },
+    {
+      id: 6,
+      title: "Gym CRM & Membership Platform",
+      description: "Subscription-based CRM with billing automation and attendance tracking. Integrated AI-assisted insights for member engagement and retention analysis.",
+      category: ["saas", "ai"],
+      tech: ["Next.js", "Python", "PostgreSQL", "Stripe", "AI/ML"],
+      icon: "Layers",
+      color: "#ff00a0",
+      featured: false,
+    },
+  ],
+
+  // Experience
+  experience: [
+    {
+      id: 1,
+      company: "Mohap (AI Team)",
+      role: "Full-Stack & AI Engineer",
+      period: "Mar 2025 - Present",
+      location: "Remote",
+      description: "Led end-to-end development of AI-powered SaaS systems for vendor intelligence and procurement optimization.",
+      achievements: [
+        "Architected FastAPI microservices with PostgreSQL & MongoDB",
+        "Designed Dockerized deployments with Nginx and CI/CD pipelines",
+        "Built LLM-powered vendor recommendation systems",
+        "Implemented Celery workers and scheduled automation tasks",
+      ],
+      type: "work" as const,
+    },
+    {
+      id: 2,
+      company: "Vaayuh System",
+      role: "Software Engineering Intern",
+      period: "Nov 2021 - Dec 2023",
+      location: "Pune, India",
+      description: "Contributed to full-stack development across MERN, Laravel, and Flask systems.",
+      achievements: [
+        "Built coaching platform with payment gateway integration",
+        "Developed Zoom API integration for virtual sessions",
+        "Created admin dashboards and client portals",
+        "Implemented secure third-party API integrations",
+      ],
+      type: "internship" as const,
+    },
+    {
+      id: 3,
+      company: "Freelance",
+      role: "AI & SaaS Engineer",
+      period: "2023 - Present",
+      location: "Remote",
+      description: "Design and deliver production-ready SaaS platforms for small and mid-sized businesses.",
+      achievements: [
+        "Event Management Platform with role-based access",
+        "Doctor Appointment System with secure authentication",
+        "Gym CRM with AI-assisted member insights",
+        "Docker-based cloud deployments with CI/CD",
+      ],
+      type: "freelance" as const,
+    },
+  ],
+
+  // Contact Info
+  contact: [
+    { icon: "Mail", label: "Email", value: "shu14mojad@gmail.com", href: "mailto:shu14mojad@gmail.com" },
+    { icon: "Phone", label: "Phone", value: "+91 76668 34062", href: "tel:+917666834062" },
+    { icon: "MapPin", label: "Location", value: "Nashik, India", href: null },
+  ],
+};
