@@ -7,7 +7,7 @@ import { NeonCard } from "../components/effects/NeonCard";
 import { GlitchText } from "../components/effects/GlitchText";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Sparkles, Bot, Code2, Layers } from "lucide-react";
+import { Sparkles, Bot, Code2, Layers } from "lucide-react";
 import { portfolioConfig } from "@/lib/content";
 
 type ProjectCategory = "all" | "ai" | "fullstack" | "saas";
@@ -141,30 +141,9 @@ export function Projects() {
                   )}
                 </div>
 
-                {/* Actions */}
-                <div className="flex gap-3 pt-4 border-t border-[#00f0ff]/10">
-                  {project.github && (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="flex-1 border-[#00f0ff]/30 text-[#00f0ff] hover:bg-[#00f0ff]/10"
-                    >
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
-                    </Button>
-                  )}
-                  {project.demo && (
-                    <Button
-                      size="sm"
-                      className="flex-1 bg-[#00f0ff] text-[#0a0a0f] hover:bg-[#00f0ff]/90"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Demo
-                    </Button>
-                  )}
-                  {!project.github && !project.demo && (
-                    <span className="text-xs text-[#a0a0b0] italic">Private Project</span>
-                  )}
+                {/* Status */}
+                <div className="pt-4 border-t border-[#00f0ff]/10">
+                  <span className="text-xs text-[#a0a0b0] italic">Project Details Available</span>
                 </div>
               </NeonCard>
             </motion.div>
