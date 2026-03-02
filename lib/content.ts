@@ -10,7 +10,7 @@ export const portfolioConfig = {
     description: "AI Systems & Full-Stack Engineer with 2.5+ years of experience building multi-tenant SaaS platforms and LLM-powered applications. Specialized in FastAPI microservices architecture, React-based product interfaces, and AI-driven vendor intelligence systems. Experienced in prompt engineering, RAG-based workflows, API optimization, database performance tuning, and Dockerized production deployments. Strong focus on system design, reliability, and shipping AI-enabled products end-to-end in startup environments.",
     summary: "Building multi-tenant SaaS platforms and LLM-powered applications. Specialized in FastAPI microservices, React/Next.js product UI architecture, and AI-driven vendor intelligence systems.",
     stats: [
-      { value: "2.5+", label: "Years Exp" },
+      { value: "3.5+", label: "Years Exp" },
       { value: "12+", label: "Projects" },
       { value: "6+", label: "AI Systems" },
     ]
@@ -18,8 +18,8 @@ export const portfolioConfig = {
 
   // Social Links
   social: [
-    { name: "GitHub", url: "https://github.com", icon: "Github" },
-    { name: "LinkedIn", url: "https://linkedin.com", icon: "Linkedin" },
+    { name: "GitHub", url: "https://github.com/shubham14-ai", icon: "Github" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/shubham-mojad-ai", icon: "Linkedin" },
     { name: "Email", url: "mailto:shu14mojad@gmail.com", icon: "Mail" },
   ],
 
@@ -37,6 +37,18 @@ export const portfolioConfig = {
   // Skills
   skills: {
     categories: [
+      {
+        title: "Technical Proficiency",
+        name: "Code",
+        items: [
+          { name: "Python", level: 95 },
+          { name: "AI Prompting", level: 90 },
+          { name: "FastAPI", level: 95 },
+          { name: "React", level: 92 },
+          { name: "Docker", level: 92 }
+        ],
+        color: "#4a5568",
+      },
       {
         title: "Languages",
         name: "Code",
@@ -110,6 +122,16 @@ export const portfolioConfig = {
         color: "#ff00a0",
       },
     ],
+     additional: [
+      { name: "Docker", category: "DevOps" },
+      { name: "Nginx", category: "DevOps" },
+      { name: "Git", category: "Tools" },
+      { name: "Celery", category: "Backend" },
+      { name: "Redis", category: "Caching" },
+      { name: "Pandas", category: "Data" },
+      { name: "LLM Integration", category: "AI" },
+      { name: "Prompt Engineering", category: "AI" }
+     ]
   },
 
   // Expertise
@@ -243,7 +265,7 @@ export const portfolioConfig = {
       id: 3,
       company: "Vaayuh System",
       role: "Software Engineering Intern",
-      period: "Nov 2021 – Dec 2023",
+      period: "Nov 2022 – Dec 2023",
       location: "Pune, India",
       description: "Contributed to full-stack development across MERN, Laravel, and Python-Flask applications.",
       achievements: [

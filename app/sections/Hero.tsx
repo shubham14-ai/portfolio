@@ -6,8 +6,31 @@ import { Button } from "@/components/ui/button";
 import { Download, ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { ParticleBackground } from "../components/effects/ParticleBackground";
 import { portfolioConfig } from "@/lib/content";
+import { saveAs } from 'file-saver';
 
 export function Hero() {
+  const downloadResume = () => {
+    // Create a blob from the PDF file
+    fetch('/shubham mojad.pdf')
+      .then(response => response.blob())
+      .then(blob => {
+        // Create a temporary link and trigger download
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Shubham Mojad.pdf';
+        document.body.appendChild(a);
+        a.click();
+        // Clean up
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+      })
+      .catch(error => {
+        console.error('Error downloading resume:', error);
+        alert('Failed to download resume. Please try again.');
+      });
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
       <ParticleBackground />
@@ -126,6 +149,7 @@ export function Hero() {
             size="lg"
             variant="outline"
             className="border-[#ff00a0] text-[#ff00a0] hover:bg-[#ff00a0]/10 font-semibold px-8 py-6 text-lg rounded-lg transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,0,160,0.3)]"
+            onClick={downloadResume}
           >
             <Download className="mr-2 h-5 w-5" />
             Download Resume

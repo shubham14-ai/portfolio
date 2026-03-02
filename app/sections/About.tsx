@@ -8,6 +8,7 @@ import { NeonCard } from "../components/effects/NeonCard";
 import { GlitchText } from "../components/effects/GlitchText";
 import { Terminal, Cpu, Database, Globe, Layers, Zap } from "lucide-react";
 import { portfolioConfig } from "@/lib/content";
+import { calculateExperience } from "@/lib/utils";
 
 export function About() {
   const ref = useRef(null);
@@ -165,18 +166,22 @@ export function About() {
 
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-4 mt-8">
-              {portfolioConfig.personal.stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.4, delay: 1 + index * 0.1 }}
-                  className="text-center p-4 rounded-lg border border-[#00f0ff]/20 bg-[#00f0ff]/5"
-                >
-                  <div className="text-2xl font-bold text-[#00f0ff] text-glow-cyan">{stat.value}</div>
-                  <div className="text-xs text-[#a0a0b0] uppercase tracking-wider">{stat.label}</div>
-                </motion.div>
-              ))}
+              {portfolioConfig.personal.stats.map((stat, index) => {
+                // Update experience value dynamically
+                const displayValue = stat.label === "Years Exp" ? calculateExperience() : stat.value;
+                return (
+                  <motion.div
+                    key={stat.label}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                    transition={{ duration: 0.4, delay: 1 + index * 0.1 }}
+                    className="text-center p-4 rounded-lg border border-[#00f0ff]/20 bg-[#00f0ff]/5"
+                  >
+                    <div className="text-2xl font-bold text-[#00f0ff] text-glow-cyan">{displayValue}</div>
+                    <div className="text-xs text-[#a0a0b0] uppercase tracking-wider">{stat.label}</div>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         </div>

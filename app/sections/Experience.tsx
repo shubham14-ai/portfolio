@@ -75,7 +75,7 @@ export function Experience() {
               </div>
 
               {/* Content Card */}
-              <div className={`ml-16 md:ml-0 md:w-5/12 ${
+              <div className={`ml-16 md:ml-0 md:w-2/3 ${
                 index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"
               }`}>
                 <div 

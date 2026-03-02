@@ -6,7 +6,7 @@ import { ReactNode } from "react";
 interface NeonCardProps {
   children: ReactNode;
   className?: string;
-  glowColor?: "cyan" | "magenta" | "purple" | "green";
+  glowColor?: "cyan" | "magenta" | "purple" | "green" | "gray";
   hoverScale?: number;
 }
 
@@ -30,6 +30,11 @@ const glowColors = {
     border: "rgba(0, 255, 157, 0.3)",
     shadow: "0 0 20px rgba(0, 255, 157, 0.3), 0 0 40px rgba(0, 255, 157, 0.1)",
     hoverShadow: "0 0 30px rgba(0, 255, 157, 0.5), 0 0 60px rgba(0, 255, 157, 0.2), inset 0 0 20px rgba(0, 255, 157, 0.05)",
+  },
+  gray: {
+    border: "rgba(120, 120, 120, 0.3)",
+    shadow: "0 0 15px rgba(120, 120, 120, 0.2), 0 0 30px rgba(120, 120, 120, 0.1)",
+    hoverShadow: "0 0 25px rgba(120, 120, 120, 0.4), 0 0 50px rgba(120, 120, 120, 0.15), inset 0 0 15px rgba(120, 120, 120, 0.05)",
   },
 };
 
@@ -56,6 +61,7 @@ export function NeonCard({
         borderColor: glowColor === "cyan" ? "rgba(0, 240, 255, 0.6)" : 
                     glowColor === "magenta" ? "rgba(255, 0, 160, 0.6)" :
                     glowColor === "purple" ? "rgba(123, 45, 255, 0.6)" :
+                    glowColor === "gray" ? "rgba(120, 120, 120, 0.6)" :
                     "rgba(0, 255, 157, 0.6)",
       }}
       transition={{ duration: 0.3 }}
