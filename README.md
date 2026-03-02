@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Personal Portfolio
+
+This is my personal portfolio website built with Next.js 14, featuring interactive effects and deployed on Vercel.
 
 ## Getting Started
 
@@ -31,6 +33,16 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This portfolio is ready for deployment on Vercel. The particle background effect has been fixed for successful builds.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push your code to a Git repository
+2. Go to [Vercel Dashboard](https://vercel.com/dashboard)
+3. Click "New Project" and import your repository
+4. Vercel will automatically detect this is a Next.js project and configure the build settings
+5. Click "Deploy"
+
+Your portfolio will be live in seconds with automatic SSL, a custom domain option, and global CDN distribution!
+
+For detailed deployment steps, see [VERCEL_DEPLOYMENT_GUIDE.md](./VERCEL_DEPLOYMENT_GUIDE.md).
+
+A `vercel.json` configuration file has been added to ensure proper deployment on the Vercel platform.

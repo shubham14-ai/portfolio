@@ -18,6 +18,7 @@ export function Contact() {
   const [formState, setFormState] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -31,11 +32,32 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitting(false);
-    setFormState({ name: "", email: "", message: "" });
-    alert("Message sent successfully!");
+    
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          name: formState.name, 
+          email: formState.email, 
+          message: formState.message 
+        }),
+      });
+
+      const data = await res.json();
+      
+      if (res.ok && data.success) {
+        setFormState({ name: "", email: "", phone: "", message: "" });
+        alert("Message sent successfully!");
+      } else {
+        alert(data.error || "Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -191,6 +213,17 @@ export function Contact() {
                     value={formState.email}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormState({ ...formState, email: e.target.value })}
                     required
+                    className="bg-[#1a1a25] border-[#00f0ff]/20 text-white placeholder:text-[#a0a0b0]/50 focus:border-[#00f0ff]/50 focus:ring-[#00f0ff]/20"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[#a0a0b0] text-sm mb-2">Phone (Optional)</label>
+                  <Input
+                    type="tel"
+                    placeholder="+1 (555) 123-4567"
+                    value={formState.phone}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormState({ ...formState, phone: e.target.value })}
                     className="bg-[#1a1a25] border-[#00f0ff]/20 text-white placeholder:text-[#a0a0b0]/50 focus:border-[#00f0ff]/50 focus:ring-[#00f0ff]/20"
                   />
                 </div>
