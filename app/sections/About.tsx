@@ -101,7 +101,10 @@ export function About() {
               Technical Proficiency
             </h3>
 
-            {portfolioConfig.skills.categories[0]?.skills.map((skill, index) => {
+            {portfolioConfig.skills.categories[0]?.items?.map((item, index) => {
+              // Handle both string items and object items with levels
+              const skill = typeof item === 'string' ? { name: item, level: 0 } : item;
+              
               const iconMap = {
                 "AI/ML Systems": Cpu,
                 "FastAPI/Python": Zap,
@@ -109,7 +112,13 @@ export function About() {
                 "Database Design": Database,
                 "DevOps/Docker": Layers,
               };
-              const IconComponent = iconMap[skill.name as keyof typeof iconMap] || Cpu;
+              const iconKeys = Object.keys(iconMap);
+              const fallbackIcons = [Cpu, Zap, Globe, Database, Layers];
+              
+              // Use a fallback icon based on index if no match is found
+              const IconComponent = iconKeys.includes(skill.name) ? 
+                iconMap[skill.name as keyof typeof iconMap] : 
+                fallbackIcons[index % fallbackIcons.length];
               
               return (
                 <motion.div
@@ -124,28 +133,32 @@ export function About() {
                       <IconComponent className="w-5 h-5" style={{ color: portfolioConfig.skills.categories[0].color }} />
                       <span className="text-white font-medium">{skill.name}</span>
                     </div>
-                    <span className="text-[#a0a0b0] font-mono">{skill.level}%</span>
+                    {skill.level > 0 && (
+                      <span className="text-[#a0a0b0] font-mono">{skill.level}%</span>
+                    )}
                   </div>
-                  <div className="h-2 bg-[#1a1a25] rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={isInView ? { width: `${skill.level}%` } : {}}
-                      transition={{ duration: 1, delay: 0.7 + index * 0.1, ease: "easeOut" }}
-                      className="h-full rounded-full relative"
-                      style={{ 
-                        background: `linear-gradient(90deg, ${portfolioConfig.skills.categories[0].color}, ${portfolioConfig.skills.categories[0].color}80)`,
-                        boxShadow: `0 0 10px ${portfolioConfig.skills.categories[0].color}50`,
-                      }}
-                    >
-                      <div 
-                        className="absolute inset-0 opacity-50"
-                        style={{
-                          background: `linear-gradient(90deg, transparent, ${portfolioConfig.skills.categories[0].color}, transparent)`,
-                          animation: "shimmer 2s infinite",
+                  {skill.level > 0 && (
+                    <div className="h-2 bg-[#1a1a25] rounded-full overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        animate={isInView ? { width: `${skill.level}%` } : {}}
+                        transition={{ duration: 1, delay: 0.7 + index * 0.1, ease: "easeOut" }}
+                        className="h-full rounded-full relative"
+                        style={{ 
+                          background: `linear-gradient(90deg, ${portfolioConfig.skills.categories[0].color}, ${portfolioConfig.skills.categories[0].color}80)`,
+                          boxShadow: `0 0 10px ${portfolioConfig.skills.categories[0].color}50`,
                         }}
-                      />
-                    </motion.div>
-                  </div>
+                      >
+                        <div 
+                          className="absolute inset-0 opacity-50"
+                          style={{
+                            background: `linear-gradient(90deg, transparent, ${portfolioConfig.skills.categories[0].color}, transparent)`,
+                            animation: "shimmer 2s infinite",
+                          }}
+                        />
+                      </motion.div>
+                    </div>
+                  )}
                 </motion.div>
               );
             })}

@@ -1,9 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { portfolioConfig } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Shubham Mojad - AI Systems & Full-Stack Engineer",
-  description: "Portfolio of Shubham Mojad, AI Systems & Full-Stack Engineer specializing in FastAPI microservices, React/Next.js, and AI-driven applications.",
+  title: `${portfolioConfig.personal.name} - ${portfolioConfig.personal.role}`,
+  description: portfolioConfig.personal.description,
 };
 
 export default function RootLayout({

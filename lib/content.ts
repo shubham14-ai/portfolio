@@ -28,7 +28,8 @@ export const portfolioConfig = {
     { name: "Python", color: "#00f0ff" },
     { name: "FastAPI", color: "#00ff9d" },
     { name: "React", color: "#00f0ff" },
-    { name: "Next.js", color: "#ffffff" },
+    { name: "NextJS", color:"00f0ff"},
+    { name: "PostgreSQL", color: "#ffffff" },
     { name: "AI/ML", color: "#ff00a0" },
     { name: "Docker", color: "#7b2dff" },
   ],
@@ -38,54 +39,76 @@ export const portfolioConfig = {
     categories: [
       {
         title: "Languages",
-        skills: [
+        name: "Code",
+        items: [
           { name: "Python", level: 95 },
           { name: "JavaScript", level: 90 },
+          { name: "C/C++", level: 85 },
+          { name: "PHP", level: 80 }
         ],
         color: "#00f0ff",
       },
       {
         title: "Frontend",
-        skills: [
+        name: "Interfaces",
+        items: [
           { name: "React", level: 92 },
-          { name: "Next.js", level: 90 },
-          { name: "HTML5/CSS3", level: 88 },
-          { name: "Bootstrap", level: 85 },
+          { name: "NextJS", level: 88 },
+          { name: "HTML5 & CSS3", level: 90 },
+          { name: "MUI", level: 85 },
+          { name: "Material React Table", level: 80 }
         ],
         color: "#00ff9d",
       },
       {
         title: "Backend",
-        skills: [
+        name: "Systems",
+        items: [
           { name: "FastAPI", level: 95 },
-          { name: "Node.js", level: 82 },
-          { name: "Express.js", level: 80 },
+          { name: "Node.js", level: 88 },
+          { name: "Express.js", level: 85 },
+          { name: "Laravel", level: 80 }
         ],
         color: "#ff00a0",
       },
       {
         title: "Databases",
-        skills: [
-          { name: "PostgreSQL", level: 90 },
-          { name: "MongoDB", level: 88 },
+        name: "Data Stores",
+        items: [
+          { name: "MongoDB", level: 90 },
+          { name: "PostgreSQL", level: 95 },
           { name: "MySQL", level: 85 },
+          { name: "SQL Server", level: 80 }
         ],
         color: "#7b2dff",
       },
-    ],
-    additional: [
-      { name: "Docker", category: "DevOps" },
-      { name: "Nginx", category: "DevOps" },
-      { name: "Git", category: "Tools" },
-      { name: "Celery", category: "Backend" },
-      { name: "Redis", category: "Caching" },
-      { name: "Pandas", category: "Data" },
-      { name: "LLM Integration", category: "AI" },
-      { name: "Prompt Engineering", category: "AI" },
-      { name: "RAG", category: "AI" },
-      { name: "Vector Search", category: "AI" },
-      { name: "CI/CD", category: "DevOps" },
-      { name: "Cron Jobs", category: "DevOps" },
+      {
+        title: "AI & Data",
+        name: "Intelligence",
+        items: [
+          { name: "Machine Learning", level: 90 },
+          { name: "Pandas", level: 88 },
+          { name: "Prompt Engineering", level: 95 },
+          { name: "Vector Search", level: 92 },
+          { name: "LLM Workflows", level: 95 },
+          { name: "AI Chatbots", level: 90 }
+        ],
+        color: "#00f0ff",
+      },
+      {
+        title: "DevOps",
+        name: "Infrastructure",
+        items: [
+          { name: "Docker", level: 92 },
+          { name: "Nginx", level: 88 },
+          { name: "CI/CD", level: 85 },
+          { name: "Load Balancing", level: 80 },
+          { name: "Celery", level: 85 },
+          { name: "Cron Jobs", level: 82 },
+          { name: "Portainer", level: 75 }
+        ],
+        color: "#ff00a0",
+      },
     ],
   },
 
@@ -97,8 +120,14 @@ export const portfolioConfig = {
     "Multi-Tenant SaaS Systems & RBAC",
     "Vendor Intelligence & Recommendation Engines",
     "Docker, Nginx & CI/CD Deployments",
+    "Background Workers (Celery) & Cron Jobs",
     "PostgreSQL, MongoDB & Query Optimization",
+
   ],
+
+
+  
+
 
   // Projects
   projects: [
