@@ -11,7 +11,7 @@ export const portfolioConfig = {
     summary: "Building multi-tenant SaaS platforms and LLM-powered applications. Specialized in FastAPI microservices, React/Next.js product UI architecture, and AI-driven vendor intelligence systems. Developed multiple independent SaaS products before joining full-time roles.",
     stats: [
       { value: "3.5+", label: "Years Exp" },
-      { value: "12+", label: "Projects" },
+      { value: "12+", label: "Production & Research Projects" },
       { value: "6+", label: "AI Systems" },
     ]
   },
@@ -281,25 +281,86 @@ export const portfolioConfig = {
   // Independent AI & SaaS Projects (Pre-Employment & Personal Products)
   independentProjects: [
     {
-      title: "Gym CRM & Membership Platform",
-      description: "Subscription-based CRM with billing automation and attendance tracking. Integrated AI-assisted insights for member engagement and retention analysis.",
-      tech: ["Next.js", "Python", "PostgreSQL", "Stripe", "AI/ML"],
+      title: "Gym CRM & Membership Intelligence Platform",
+      description: "End-to-end SaaS platform designed for gym operations, membership lifecycle management, and retention analytics.",
+      tech: ["Next.js", "FastAPI", "PostgreSQL", "Redis", "Docker"],
       icon: "Layers",
       color: "#ff00a0",
+      highlights: [
+        "Architected multi-role SaaS system supporting admins, trainers, and members with RBAC authorization",
+        "Built subscription billing automation with recurring payments and failure handling workflows",
+        "Implemented attendance analytics pipelines to track member activity and retention patterns",
+        "Integrated AI-driven engagement insights to identify churn risk and recommend retention actions",
+        "Optimized APIs for high-frequency check-in workloads and real-time dashboard reporting"
+      ]
     },
     {
-      title: "Doctor Appointment System",
-      description: "Appointment scheduling system with patient, doctor, and admin modules. Implemented authentication, reminders, and structured medical data workflows.",
-      tech: ["React", "FastAPI", "PostgreSQL", "JWT", "Docker"],
+      title: "Healthcare Appointment Scheduling Platform",
+      description: "Full-stack scheduling and healthcare workflow system supporting patient, doctor, and administrative roles.",
+      tech: ["React", "FastAPI", "PostgreSQL", "JWT Auth", "Docker"],
       icon: "Code2",
       color: "#00f0ff",
+      highlights: [
+        "Designed modular FastAPI backend with scalable appointment scheduling workflows",
+        "Implemented real-time slot management and conflict prevention",
+        "Built secure medical data workflows with structured patient records",
+        "Developed automated reminders and notification system",
+        "Optimized database queries for high-concurrency appointment booking"
+      ]
     },
     {
-      title: "Event Management Platform",
-      description: "Full-stack booking system with role-based access, booking workflows, and analytics dashboards. Optimized for high-concurrency registrations.",
-      tech: ["Next.js", "Node.js", "MongoDB", "Redis", "AWS"],
+      title: "High-Concurrency Event Booking System",
+      description: "Full-stack platform for managing large-scale event registrations, ticketing workflows, and analytics dashboards.",
+      tech: ["Next.js", "Node.js", "MongoDB", "Redis", "Docker"],
       icon: "Code2",
       color: "#00ff9d",
+      highlights: [
+        "Built scalable booking architecture supporting concurrent ticket reservations",
+        "Implemented role-based access control for organizers and attendees",
+        "Designed event analytics dashboards for attendance and revenue insights",
+        "Integrated Redis-based caching to handle peak registration traffic",
+        "Developed real-time booking state management to prevent double-booking"
+      ]
+    },
+  ],
+
+  // AI Agent Systems (Single & Multi-Agent)
+  aiAgentSystems: [
+    {
+      id: 1,
+      type: "single",
+      title: "LLM-Based Vendor Intelligence Engine",
+      description: "LLM-powered supplier ranking and cost-optimization engine using structured prompt pipelines and automated vendor scoring workflows.",
+      agents: 1,
+      status: "Completed",
+      tech: ["Python", "FastAPI", "OpenAI", "PostgreSQL", "Vector Search"],
+      icon: "Bot",
+      color: "#00f0ff",
+      highlights: [
+        "Engineered structured prompt engineering pipelines for complex vendor evaluation",
+        "Implemented RAG-based workflows for contextual supplier intelligence",
+        "Automated vendor scoring and recommendation generation workflows"
+      ]
+    },
+    {
+      id: 2,
+      type: "multi-agent",
+      title: "Experimental Multi-Agent Quant Trading System",
+      description: "Experimental multi-agent financial intelligence platform where specialized AI agents collaborate to analyze market data, generate trading signals, and manage risk.",
+      agents: 17,
+      status: "In Progress",
+      tech: ["Python", "FastAPI", "Kafka", "TimescaleDB", "LSTM", "Pandas"],
+      icon: "Layers",
+      color: "#ff00a0",
+      features: [
+        "17 collaborative AI agents: Data Ingestion, Technical Indicators, Market Prediction, Strategy Evaluation, Risk Management, Execution Planning",
+        "Real-time market processing pipeline handling 10,000+ ticks/sec",
+        "Sub-500ms signal generation for trading decisions",
+        "Multi-layer risk control system with portfolio exposure limits and circuit breakers",
+        "Time-series optimized storage using TimescaleDB",
+        "Event-driven architecture using Kafka streaming",
+        "Comprehensive documentation (20+ architecture docs)"
+      ]
     },
   ],
 

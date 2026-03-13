@@ -27,11 +27,11 @@ export function IndependentProjects() {
             &lt;Independent Projects /&gt;
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-            <GlitchText text="Selected SaaS Platforms Built" className="text-white" as="span" />
+            <GlitchText text="Independent Systems & SaaS Platforms" className="text-white" as="span" />
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-[#00f0ff] to-[#ff00a0] mx-auto rounded-full mb-6" />
-          <p className="text-[#a0a0b0] max-w-2xl mx-auto">
-            Pre-employment and personal SaaS products developed before joining full-time roles.
+          <p className="text-[#a0a0b0] max-w-3xl mx-auto">
+            A collection of production-grade systems and personal engineering projects built to explore scalable architectures, AI workflows, and real-world SaaS product development.
           </p>
         </motion.div>
 
@@ -71,9 +71,21 @@ export function IndependentProjects() {
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#00f0ff] transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-[#a0a0b0] text-sm mb-4 flex-grow leading-relaxed">
+                <p className="text-[#a0a0b0] text-sm mb-4 leading-relaxed">
                   {project.description}
                 </p>
+
+                {/* Key Engineering Work */}
+                {project.highlights && (
+                  <div className="mb-4 space-y-2">
+                    {project.highlights.map((highlight: string, idx: number) => (
+                      <div key={idx} className="flex items-start gap-2 text-sm text-[#a0a0b0]">
+                        <div className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ background: project.color }} />
+                        <span>{highlight}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
 
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mb-4">
