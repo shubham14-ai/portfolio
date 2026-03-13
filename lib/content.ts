@@ -8,7 +8,7 @@ export const portfolioConfig = {
     phone: "+91 76668 34062",
     location: "Nashik, India",
     description: "AI Systems & Full-Stack Engineer with 2.5+ years of experience building multi-tenant SaaS platforms and LLM-powered applications. Specialized in FastAPI microservices architecture, React-based product interfaces, and AI-driven vendor intelligence systems. Experienced in prompt engineering, RAG-based workflows, API optimization, database performance tuning, and Dockerized production deployments. Strong focus on system design, reliability, and shipping AI-enabled products end-to-end in startup environments.",
-    summary: "Building multi-tenant SaaS platforms and LLM-powered applications. Specialized in FastAPI microservices, React/Next.js product UI architecture, and AI-driven vendor intelligence systems.",
+    summary: "Building multi-tenant SaaS platforms and LLM-powered applications. Specialized in FastAPI microservices, React/Next.js product UI architecture, and AI-driven vendor intelligence systems. Developed multiple independent SaaS products before joining full-time roles.",
     stats: [
       { value: "3.5+", label: "Years Exp" },
       { value: "12+", label: "Projects" },
@@ -276,21 +276,30 @@ export const portfolioConfig = {
       ],
       type: "internship" as const,
     },
+  ],
+
+  // Independent AI & SaaS Projects (Pre-Employment & Personal Products)
+  independentProjects: [
     {
-      id: 4,
-      company: "Freelance",
-      role: "AI & SaaS Engineer",
-      period: "2023 – Present",
-      location: "Remote",
-      description: "Designed and delivered scalable SaaS platforms for SMB clients.",
-      achievements: [
-        "Event Management Platform - Developed full-stack booking system with role-based authentication and analytics dashboards. Optimized APIs for high-concurrency user registrations.",
-        "Doctor Appointment System - Built appointment scheduling system with patient, doctor, and admin modules. Implemented authentication, reminders, and structured medical data workflows.",
-        "Gym CRM & Membership Platform - Developed subscription-based CRM with billing automation and attendance tracking. Integrated AI-driven engagement insights and retention analytics.",
-        "Managed Docker-based cloud deployments with Nginx and CI/CD pipelines",
-        "Integrated LLM-based summarization and reporting workflows",
-      ],
-      type: "freelance" as const,
+      title: "Gym CRM & Membership Platform",
+      description: "Subscription-based CRM with billing automation and attendance tracking. Integrated AI-assisted insights for member engagement and retention analysis.",
+      tech: ["Next.js", "Python", "PostgreSQL", "Stripe", "AI/ML"],
+      icon: "Layers",
+      color: "#ff00a0",
+    },
+    {
+      title: "Doctor Appointment System",
+      description: "Appointment scheduling system with patient, doctor, and admin modules. Implemented authentication, reminders, and structured medical data workflows.",
+      tech: ["React", "FastAPI", "PostgreSQL", "JWT", "Docker"],
+      icon: "Code2",
+      color: "#00f0ff",
+    },
+    {
+      title: "Event Management Platform",
+      description: "Full-stack booking system with role-based access, booking workflows, and analytics dashboards. Optimized for high-concurrency registrations.",
+      tech: ["Next.js", "Node.js", "MongoDB", "Redis", "AWS"],
+      icon: "Code2",
+      color: "#00ff9d",
     },
   ],
 
