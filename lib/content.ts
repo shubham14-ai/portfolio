@@ -29,9 +29,12 @@ export const portfolioConfig = {
     { name: "FastAPI", color: "#00ff9d" },
     { name: "React", color: "#00f0ff" },
     { name: "NextJS", color:"00f0ff"},
+    { name: "TypeScript", color: "#3178c6" },
     { name: "PostgreSQL", color: "#ffffff" },
     { name: "AI/ML", color: "#ff00a0" },
     { name: "Docker", color: "#7b2dff" },
+    { name: "Redux", color: "#764abc" },
+    { name: "Zustand", color: "#573369" },
   ],
 
   // Skills
@@ -55,6 +58,7 @@ export const portfolioConfig = {
         items: [
           { name: "Python", level: 95 },
           { name: "JavaScript", level: 90 },
+          { name: "TypeScript", level: 90 },
           { name: "C/C++", level: 85 },
           { name: "PHP", level: 80 }
         ],
@@ -68,7 +72,9 @@ export const portfolioConfig = {
           { name: "NextJS", level: 88 },
           { name: "HTML5 & CSS3", level: 90 },
           { name: "MUI", level: 85 },
-          { name: "Material React Table", level: 80 }
+          { name: "Material React Table", level: 80 },
+          { name: "Redux", level: 88 },
+          { name: "Zustand", level: 85 }
         ],
         color: "#00ff9d",
       },
@@ -130,7 +136,10 @@ export const portfolioConfig = {
       { name: "Redis", category: "Caching" },
       { name: "Pandas", category: "Data" },
       { name: "LLM Integration", category: "AI" },
-      { name: "Prompt Engineering", category: "AI" }
+      { name: "Prompt Engineering", category: "AI" },
+      { name: "TypeScript", category: "Languages" },
+      { name: "Redux", category: "State Management" },
+      { name: "Zustand", category: "State Management" }
      ]
   },
 
