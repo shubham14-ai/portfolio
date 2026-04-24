@@ -7,7 +7,7 @@ import { NeonCard } from "../components/effects/NeonCard";
 import { GlitchText } from "../components/effects/GlitchText";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Bot, Code2, Layers, ChevronLeft, ChevronRight } from "lucide-react";
+import { Sparkles, Bot, Code2, Layers, ChevronLeft, ChevronRight, Github, ExternalLink } from "lucide-react";
 import { portfolioConfig } from "@/lib/content";
 
 type ProjectCategory = "all" | "ai" | "fullstack" | "saas";
@@ -233,8 +233,32 @@ export function Projects() {
                     </div>
 
                     {/* Status */}
-                    <div className="pt-4 border-t border-[#00f0ff]/10">
+                    <div className="pt-4 border-t border-[#00f0ff]/10 flex items-center justify-between">
                       <span className="text-xs text-[#a0a0b0] italic">Project Details Available</span>
+                      <div className="flex gap-2">
+                        {filteredProjects[currentProjectIndex].github && (
+                          <a
+                            href={filteredProjects[currentProjectIndex].github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-mono bg-[#00f0ff]/10 border border-[#00f0ff]/30 text-[#00f0ff] hover:bg-[#00f0ff]/20 transition-all duration-300"
+                          >
+                            <Github className="w-3 h-3" />
+                            Code
+                          </a>
+                        )}
+                        {filteredProjects[currentProjectIndex].demo && (
+                          <a
+                            href={filteredProjects[currentProjectIndex].demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-mono bg-[#00ff9d]/10 border border-[#00ff9d]/30 text-[#00ff9d] hover:bg-[#00ff9d]/20 transition-all duration-300"
+                          >
+                            <ExternalLink className="w-3 h-3" />
+                            Demo
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </NeonCard>
                 </motion.div>

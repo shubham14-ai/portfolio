@@ -197,7 +197,7 @@ export function Contact() {
                   <label className="block text-[#a0a0b0] text-sm mb-2">Name</label>
                   <Input
                     type="text"
-                    placeholder="John Doe"
+                    placeholder="Your name"
                     value={formState.name}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormState({ ...formState, name: e.target.value })}
                     required
@@ -209,7 +209,7 @@ export function Contact() {
                   <label className="block text-[#a0a0b0] text-sm mb-2">Email</label>
                   <Input
                     type="email"
-                    placeholder="john@example.com"
+                    placeholder="your@email.com"
                     value={formState.email}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormState({ ...formState, email: e.target.value })}
                     required
@@ -221,7 +221,7 @@ export function Contact() {
                   <label className="block text-[#a0a0b0] text-sm mb-2">Phone (Optional)</label>
                   <Input
                     type="tel"
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="Optional"
                     value={formState.phone}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormState({ ...formState, phone: e.target.value })}
                     className="bg-[#1a1a25] border-[#00f0ff]/20 text-white placeholder:text-[#a0a0b0]/50 focus:border-[#00f0ff]/50 focus:ring-[#00f0ff]/20"

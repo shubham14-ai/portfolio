@@ -6,6 +6,7 @@ import { Projects } from "./sections/Projects";
 import { Experience } from "./sections/Experience";
 import { IndependentProjects } from "./sections/IndependentProjects";
 import { AIAgents } from "./sections/AIAgents";
+import { Education } from "./sections/Education";
 import { Skills } from "./sections/Skills";
 import { Contact } from "./sections/Contact";
 
@@ -18,6 +19,7 @@ export default function Home() {
       <IndependentProjects />
       <AIAgents />
       <Experience />
+      <Education />
       <Skills />
       <Contact />
     </main>

@@ -47,39 +47,31 @@ export function Skills() {
                   <span className="w-2 h-2 rounded-full" style={{ background: category.color }} />
                   {category.title}
                 </h3>
-                <div className="space-y-4">
+                <div className="flex flex-wrap gap-2">
                   {category.items.map((item, skillIndex) => {
-                    // Check if item is an object with name and level or just a string
                     const skillName = typeof item === 'string' ? item : item.name;
-                    const skillLevel = typeof item === 'string' ? 0 : item.level;
                     
                     return (
-                      <div key={skillName}>
-                        <div className="flex justify-between mb-1">
-                          <span className="text-white text-sm">{skillName}</span>
-                          {typeof item !== 'string' && (
-                            <span className="text-[#a0a0b0] text-sm font-mono">{skillLevel}%</span>
-                          )}
-                        </div>
-                        {typeof item !== 'string' && (
-                          <div className="h-2 bg-[#1a1a25] rounded-full overflow-hidden">
-                            <motion.div
-                              initial={{ width: 0 }}
-                              animate={isInView ? { width: `${skillLevel}%` } : {}}
-                              transition={{ 
-                                duration: 1, 
-                                delay: 0.3 + catIndex * 0.1 + skillIndex * 0.05,
-                                ease: "easeOut" 
-                              }}
-                              className="h-full rounded-full"
-                              style={{ 
-                                background: `linear-gradient(90deg, #4a5568, #718096)`,
-                                boxShadow: `0 0 8px #4a556840`,
-                              }}
-                            />
-                          </div>
-                        )}
-                      </div>
+                      <motion.span
+                        key={skillName}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                        transition={{ 
+                          duration: 0.3, 
+                          delay: 0.1 + catIndex * 0.05 + skillIndex * 0.03 
+                        }}
+                        className="px-3 py-1.5 rounded-md text-sm font-mono border transition-all duration-300 hover:scale-105 cursor-default"
+                        style={{
+                          borderColor: `${category.color}40`,
+                          color: category.color,
+                          background: `${category.color}10`,
+                        }}
+                        whileHover={{
+                          boxShadow: `0 0 15px ${category.color}30`,
+                        }}
+                      >
+                        {skillName}
+                      </motion.span>
                     );
                   })}
                 </div>
